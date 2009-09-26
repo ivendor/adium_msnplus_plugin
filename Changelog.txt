@@ -1,0 +1,18 @@
+Changelog:
+
+v0.6:
+
+- Now MSNPlus use cached versions of custom emoticon in message windows, so removing an emoticon should no more cause an Adium crash.
+- Added check for same image assigned to multiple different shortcuts.
+- When renaming emoticon, if new shortcut already exist, an alert is shown.
+- Emoticon in Custom Emoticon Panel are now sorted alphabetically.
+- Changed title and aspect of emoticon panel.
+
+v0.5:
+
+- Initial Release 
+
+
+
+Known Bugs:
+- If you uninstall the plugin, your friends will recieve your custom emoticons as you have setted before plugin uninstallation. Before removing the plugin, remove all emoticons from list, manually.

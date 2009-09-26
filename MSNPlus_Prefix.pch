@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'MSNColorNicknames' target in the 'MSNColorNicknames' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <Adium/AISharedAdium.h>
+	#import <Adium/AIPlugin.h>
+
+	#import <AdiumLibpurple/ESMSNService.h>
+
+#ifndef PREF_GROUP_MSN_SERVICE
+	#define ADIUM_14 1
+
+	#define NOTIFICATION_CENTER			[NSNotificationCenter defaultCenter]
+	#define CONTACTOBSERVER_MANAGER		[AIContactObserverManager sharedManager]
+	#define WEBKIT_BUNDLE				[NSBundle mainBundle]
+#else
+	#define NOTIFICATION_CENTER			[adium notificationCenter]
+	#define CONTACTOBSERVER_MANAGER		[adium contactController]
+	#define WEBKIT_BUNDLE				[NSBundle bundleWithIdentifier:@"com.adiumX.WebKit-Message-View"]
+#endif
+
+#endif

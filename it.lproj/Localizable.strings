@@ -1,0 +1,35 @@
+/* 
+   Localizable.strings
+   MSNPlus
+
+   Created by Tiziano Carotti on 06/09/09.
+   Copyright 2009 Tiziano Carotti. All rights reserved.
+ */
+
+"Custom emoticons panel" = "Pannello emoticon personalizzate";
+
+"Open custom emoticons panel" = "Apri pannello emoticon personalizzate";
+
+"Custom Emoticons" = "Emoticon personalizzate";
+
+"Add As Custom Emoticon" = "Aggiungi come emoticon personalizzata";
+
+"Support for MSN Custom Emoticon and MSN Plus Nickname tags." = "Supporto per le Custom Emoticon di MSN e i tag nei nickname di MSN Plus.";
+
+"Image" = "Immagine";
+
+"Shortcut" = "Abbreviazione";
+
+"Yes" = "Si";
+
+"No" = "No";
+
+"Remove the %d emoticons selected?" = "Rimuovi le %d emoticon selezionate?";
+
+"Enter the shortcut for the emoticon:" = "Inserisci l'abbreviazione per l'emoticon:";
+
+"This emoticon is already been added with another shortcut. Do you want to overwrite it?" = "Questa emoticon è stata già aggiunta con un'altra abbreviazione. Vuoi sovrascriverla?";
+
+"Emoticon with this shortcut already exist. Do you want to overwrite it?" = "Un'emoticon con questa abbreviazione già esiste. Vuoi sovrascriverla?";
+
+"Cannot open image file!"="Impossibile aprire il file dell'immagine!";
