@@ -1,5 +1,9 @@
 Changelog:
 
+v0.7:
+
+- Added Preference Group in Advanced Preference Tab with option for enabling/disabling the filtering of MSN Plus colored nickname tags.
+
 v0.6:
 
 - Now MSNPlus use cached versions of custom emoticon in message windows, so removing an emoticon should no more cause an Adium crash.

@@ -137,6 +137,11 @@
 	return AILocalizedString(@"Support for MSN Custom Emoticon and MSN Plus Nickname tags.",nil);
 }
 
+- (NSString *)pluginURL
+{
+	return @"http://msnplusadium.sourceforge.net/";
+}
+
 - (NSAttributedString *)filterAttributedString:(NSAttributedString *)inAttributedString context:(id)context {
 	return [customEmoticonController filterAttributedString:inAttributedString context:context];
 }
