@@ -2,6 +2,7 @@ Changelog:
 
 v0.7:
 
+- Added Mac OS X Tiger support.
 - Added Preference Group in Advanced Preference Tab with option for enabling/disabling the filtering of MSN Plus colored nickname tags.
 
 v0.6:
