@@ -17,6 +17,7 @@
 #import <Adium/AIContentMessage.h>
 #import <Adium/AIToolbarControllerProtocol.h>
 #import <AdiumLibpurple/ESMSNService.h>
+#import <Adium/ESDebugAILog.h>
 #import <AIUtilities/AIStringUtilities.h>
 #import <AIUtilities/AIStringAdditions.h>
 #import <AIUtilities/AIToolbarUtilities.h>
@@ -97,6 +98,17 @@
 													action:@selector(addCustomSmiley:)
 											 keyEquivalent:@""];
 	[[adium menuController] addContextualMenuItem:addAsMenuItem toLocation:Context_Contact_ChatAction];
+	
+	MSNPlusPluginPreferencePane = [[MSNPlusPreferences preferencePaneForPlugin:self] retain];
+	NSDictionary *defaults = [NSDictionary dictionaryNamed:@"MSNPlusPluginDefaults"
+												  forClass:[self class]];
+	
+	if (defaults) {
+		[[adium preferenceController] registerDefaults:defaults
+											  forGroup:PREF_GROUP_MSNPLUS];
+	} else {
+		AILog(@"MSNPlus: Failed to load defaults.");
+	}
 }
 
 /*!
@@ -109,6 +121,8 @@
 	
 	[customEmoticonController release];
 	[toolbarItem release];
+	
+	[MSNPlusPluginPreferencePane release];
 }
 
 - (NSString *)pluginAuthor {
@@ -116,7 +130,7 @@
 }
 
 - (NSString *)pluginVersion {
-	return @"0.6";
+	return @"0.7";
 }
 
 - (NSString *)pluginDescription {
@@ -206,6 +220,11 @@
 }
 
 - (NSSet *)_applyBBCode:(AIListObject*) listObject {
+	
+	if(![[[adium preferenceController] preferenceForKey:KEY_MSNPLUS_COLORED_NICKNAMES
+												 group:PREF_GROUP_MSNPLUS] boolValue])
+		return nil;
+	
 	NSSet	*modifiedAttributes;
 	
 	[[listObject displayArrayForKey:@"Display Name"] setObject:[[listObject displayName] transBBCode:FALSE] withOwner:self priorityLevel:High_Priority];
