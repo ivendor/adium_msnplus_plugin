@@ -40,7 +40,13 @@ static BOOL firstTime=YES;
 	
 	NSFileManager *mgr = [NSFileManager defaultManager];
 	if(![mgr fileExistsAtPath:cache_path])
+	{
+#if __MAC_OS_X_VERSION_MIN_REQUIRED < 1050
+		[mgr copyPath:realpath toPath:cache_path handler:nil];
+#else
 		[mgr copyItemAtPath:realpath toPath:cache_path error:NULL];
+#endif		
+	}
 	return cache_path;
 }
 
@@ -244,7 +250,12 @@ int compareSmiley(id first, id second, void* context)
 	NSTableColumn	*tableColumn2 = [[NSTableColumn alloc] initWithIdentifier:@"IMG"];
 	NSImageCell *imageCell = [[NSImageCell alloc] initImageCell:nil];
 	if ([imageCell respondsToSelector:@selector(_setAnimates:)]) [imageCell _setAnimates:NO];
-	[imageCell setImageScaling:NSImageScaleProportionallyDown];
+	
+#if __MAC_OS_X_VERSION_MIN_REQUIRED < 1050
+	[imageCell setImageScaling:NSScaleProportionally];
+#else
+	[imageCell setImageScaling:NSImageScaleProportionallyDown];	
+#endif
 	[tableColumn2 setDataCell: imageCell];
 	[tableColumn2 setEditable:NO];
 	[[tableColumn2 headerCell] setStringValue:AILocalizedString(@"Image",nil)];
