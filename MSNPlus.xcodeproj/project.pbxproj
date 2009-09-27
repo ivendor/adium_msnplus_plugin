@@ -362,7 +362,7 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = MSNPlus;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.4;
 				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = AdiumPlugin;
@@ -412,7 +412,7 @@
 				HEADER_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.4;
 				VALID_ARCHS = "i386 ppc";
 				VERSIONING_SYSTEM = "";
 			};
