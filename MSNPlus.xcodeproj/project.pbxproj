@@ -61,18 +61,18 @@
 		EB6CFB3C1052A5E500D032A4 /* AddCustomSmiley.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddCustomSmiley.xib; path = Resources/AddCustomSmiley.xib; sourceTree = "<group>"; };
 		EB6CFB3D1052A5E500D032A4 /* CustomSmiley.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomSmiley.xib; path = Resources/CustomSmiley.xib; sourceTree = "<group>"; };
 		EB6CFD501052AA4800D032A4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		EB6CFD5A1052AB2E00D032A4 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "../../adium-1.3.6/build/Deployment/Adium.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "../../adium-1.3.6/build/Deployment/AIUtilities.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FriBidi.framework; path = "../../adium-1.3.6/build/Deployment/FriBidi.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD661052AB4C00D032A4 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = "../../adium-1.3.6/Frameworks/libglib.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD681052AB4C00D032A4 /* libgmodule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmodule.framework; path = "../../adium-1.3.6/Frameworks/libgmodule.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD6A1052AB4C00D032A4 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = "../../adium-1.3.6/Frameworks/libgobject.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD6C1052AB4C00D032A4 /* libgthread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgthread.framework; path = "../../adium-1.3.6/Frameworks/libgthread.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD6E1052AB4C00D032A4 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = "../../adium-1.3.6/Frameworks/libintl.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD701052AB4C00D032A4 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "../../adium-1.3.6/Frameworks/libjson-glib.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD721052AB4C00D032A4 /* libmeanwhile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libmeanwhile.framework; path = "../../adium-1.3.6/Frameworks/libmeanwhile.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD741052AB4C00D032A4 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = "../../adium-1.3.6/Frameworks/libpurple.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFDFC1052B0F900D032A4 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = "../../adium-1.3.6/build/Deployment/AdiumLibpurple.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD5A1052AB2E00D032A4 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = Frameworks/Adium.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = Frameworks/AIUtilities.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FriBidi.framework; path = Frameworks/FriBidi.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD661052AB4C00D032A4 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = InternalFrameworks/libglib.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD681052AB4C00D032A4 /* libgmodule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmodule.framework; path = InternalFrameworks/libgmodule.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD6A1052AB4C00D032A4 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = InternalFrameworks/libgobject.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD6C1052AB4C00D032A4 /* libgthread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgthread.framework; path = InternalFrameworks/libgthread.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD6E1052AB4C00D032A4 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = InternalFrameworks/libintl.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD701052AB4C00D032A4 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "InternalFrameworks/libjson-glib.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD721052AB4C00D032A4 /* libmeanwhile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libmeanwhile.framework; path = InternalFrameworks/libmeanwhile.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD741052AB4C00D032A4 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = InternalFrameworks/libpurple.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFDFC1052B0F900D032A4 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = Frameworks/AdiumLibpurple.framework; sourceTree = SOURCE_ROOT; };
 		EB97E1E2106EAED600C6995B /* MSNPlusPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNPlusPreferences.h; sourceTree = "<group>"; };
 		EB97E1E3106EAED600C6995B /* MSNPlusPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNPlusPreferences.m; sourceTree = "<group>"; };
 		EB97E1E5106EAEF000C6995B /* MSNPlusPreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSNPlusPreferences.xib; sourceTree = "<group>"; };
@@ -344,8 +344,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(ADIUM_FOLDER)$(ADIUM_BUILD_PATH)\"",
-					"\"$(ADIUM_FOLDER)/Frameworks\"",
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/InternalFrameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -354,9 +356,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
-					"$(ADIUM_FOLDER)/Frameworks/libpurple.framework/Headers",
-					"$(ADIUM_FOLDER)/Frameworks/libgobject.framework/Headers",
-					"$(ADIUM_FOLDER)/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libgobject.framework/Headers",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -376,16 +378,18 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(ADIUM_FOLDER)$(ADIUM_BUILD_PATH)\"",
-					"\"$(ADIUM_FOLDER)/Frameworks\"",
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/InternalFrameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
-					"$(ADIUM_FOLDER)/Frameworks/libpurple.framework/Headers",
-					"$(ADIUM_FOLDER)/Frameworks/libgobject.framework/Headers",
-					"$(ADIUM_FOLDER)/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
+					"$(SRCROOT)/InternalFrameworks/libgobject.framework/Headers",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -401,12 +405,11 @@
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADIUM_BUILD_PATH = /build/Deployment;
-				ADIUM_FOLDER = "/Users/tiziano/Developer/Objective-C/Adium/adium-1.3.6";
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
@@ -421,8 +424,6 @@
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADIUM_BUILD_PATH = /build/Deployment;
-				ADIUM_FOLDER = "/Users/tiziano/Developer/Objective-C/Adium/adium-1.3.6";
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
