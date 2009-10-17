@@ -18,7 +18,7 @@
 
 @interface AIMSNPlus : AIPlugin <AIListObjectObserver, AIContentFilter> {
 	AICustomEmoticonController	*customEmoticonController;
-	NSMutableSet				*toolbarItem;
+	NSMutableSet				*toolbarItems;
 	NSMenuItem					*quickCustomMenuItem;
 	NSMenuItem					*quickContextualCustomMenuItem;
 	NSMenuItem					*addAsMenuItem;

@@ -28,8 +28,17 @@ static AISmileyController *sharedSmileyControllerInstance = nil;
 
 static BOOL firstTime=YES;
 
+static NSMutableArray* smileyArray = nil;
+
 + (void) sendChangedNotification {
+	[smileyArray release];
+	smileyArray = nil;
 	[NOTIFICATION_CENTER postNotificationName:AICustomSmileyChangeNotification object:nil];
+}
+
++ (void) unloadController {
+	[smileyArray release];
+	smileyArray = nil;
 }
 
 + (NSString *)_emoticonCachePathForCustomEmoticon:(NSString*) realpath checksum:(NSString*) checksum
@@ -50,14 +59,25 @@ static BOOL firstTime=YES;
 	return cache_path;
 }
 
+int compareSmiley(id first, id second, void* context)
+{
+	NSString* first_shortcut=[first shortcut];
+	NSString* second_shortcut=[second shortcut];
+	return [first_shortcut caseInsensitiveCompare:second_shortcut];
+}
+
 + (NSArray*) getAllSmileys {
+	
+	if(smileyArray)
+		return smileyArray;
+	
 	GList *l;
 	GList *smleys = purple_smileys_get_all();
 	if(!smleys) {
 		return [NSArray array];
 	}
 	guint lenn = g_list_length(smleys);
-	NSMutableArray* myUserArray=[[NSMutableArray alloc] initWithCapacity:lenn];
+	smileyArray=[[NSMutableArray alloc] initWithCapacity:lenn];
 	for (l = smleys; l; l = l->next) {
 		PurpleSmiley *smile = (PurpleSmiley *)l->data;
 		const char* shortcut=purple_smiley_get_shortcut(smile);
@@ -68,7 +88,7 @@ static BOOL firstTime=YES;
 			NSString* file=[NSString stringWithCString:data  encoding:NSASCIIStringEncoding];
 			NSString* my_checksum=[NSString stringWithCString:checksum  encoding:NSASCIIStringEncoding];
 			PurpleCustomSmiley* pc=[[PurpleCustomSmiley alloc] initWithShortcut:my_shortcut andPath:[self _emoticonCachePathForCustomEmoticon:file checksum:my_checksum]];
-			[myUserArray addObject: pc];
+			[smileyArray addObject: pc];
 			[pc release];
 		}
 		g_free(data);
@@ -76,7 +96,9 @@ static BOOL firstTime=YES;
 	
 	g_list_free(smleys);
 	
-	return [myUserArray autorelease]; 
+	[smileyArray sortUsingFunction: compareSmiley context: nil ];
+	
+	return smileyArray; 
 }
 
 + (id)smileyPanelWindowController {
@@ -227,13 +249,6 @@ static BOOL firstTime=YES;
 	[super dealloc];
 }
 
-int compareSmiley(id first, id second, void* context)
-{
-	NSString* first_shortcut=[first shortcut];
-	NSString* second_shortcut=[second shortcut];
-	return [first_shortcut caseInsensitiveCompare:second_shortcut];
-}
-
 - (void)windowDidLoad {
 	
 	//Center
@@ -320,6 +335,11 @@ int compareSmiley(id first, id second, void* context)
 }
 	
 - (NSImage*) image {
+	if(!image && path)
+	{
+		return [[[NSImage alloc] initWithContentsOfFile:path] autorelease];
+	}
+	
 	return image;
 }
 

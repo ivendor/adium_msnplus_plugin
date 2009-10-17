@@ -1,5 +1,9 @@
 Changelog:
 
+v0.8:
+
+- Item in "Edit" menu, contextual menu item and toolbar item now behaves as Adium Emoticons menu (That is, showing a menu with all emoticons and a link for open the emoticons panel).
+
 v0.7:
 
 - Added Mac OS X Tiger support.

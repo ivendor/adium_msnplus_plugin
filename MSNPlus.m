@@ -24,16 +24,19 @@
 #import <AIUtilities/AIMenuAdditions.h>
 #import <AIUtilities/AIDictionaryAdditions.h>
 #import <AIUtilities/AIMutableOwnerArray.h>
+#import <AIUtilities/AIImageDrawingAdditions.h>
 #import <AIUtilities/AIImageAdditions.h>
+#import <AIUtilities/MVMenuButton.h>
 #import "BBStringCategory.h"
 #import "AISmileyController.h"
 #import "AIAddSmileyController.h"
 
 #define	TOOLBAR_CUSTOM_EMOTICON_IDENTIFIER		@"CustomEmoticon"
-#define	TITLE_INSERT_CUSTOM_EMOTICON			AILocalizedString(@"Custom emoticons panel",nil)
-#define	TOOLTIP_INSERT_CUSTOM_EMOTICON			AILocalizedString(@"Open custom emoticons panel",nil)
+#define	TITLE_INSERT_CUSTOM_EMOTICON			AILocalizedString(@"Insert Custom Emoticon",nil)
+#define	TOOLTIP_INSERT_CUSTOM_EMOTICON			AILocalizedString(@"Insert a custom emoticon into the text",nil)
 #define	TITLE_CUSTOM_EMOTICON					AILocalizedString(@"Custom Emoticons",nil)
 #define TITLE_ADDAS_CUSTOM_EMOTICON				AILocalizedString(@"Add As Custom Emoticon",nil)
+#define TITLE_CUSTOM_EMOTICON_PANEL				AILocalizedString(@"Open custom emoticons panel",nil)
 
 @interface AIMSNPlus (PRIVATE)
 - (NSSet *)_applyBBCode:(AIListObject*) listObject;
@@ -56,18 +59,24 @@
 	
 	//Add Toolbar item
 	
-	toolbarItem = [[NSMutableSet alloc] init];
+	toolbarItems = [[NSMutableSet alloc] init];
 	
-	NSToolbarItem	*chatItem = [AIToolbarUtilities toolbarItemWithIdentifier:TOOLBAR_CUSTOM_EMOTICON_IDENTIFIER
+	MVMenuButton *toolbarButton = [[[MVMenuButton alloc] initWithFrame:NSMakeRect(0,0,32,32)] autorelease];
+	[toolbarButton setImage:[NSImage imageNamed:@"custom-emoticon" forClass:[self class] loadLazily:YES]];
+	
+	NSToolbarItem	*chatItem = [[AIToolbarUtilities toolbarItemWithIdentifier:TOOLBAR_CUSTOM_EMOTICON_IDENTIFIER
 																	  label:TITLE_CUSTOM_EMOTICON
 															   paletteLabel:TITLE_INSERT_CUSTOM_EMOTICON
 																	toolTip:TOOLTIP_INSERT_CUSTOM_EMOTICON
 																	 target:self
-															settingSelector:@selector(setImage:)
-																itemContent:[NSImage imageNamed:@"custom-emoticon" forClass:[self class] loadLazily:YES]
+															settingSelector:@selector(setView:)
+																itemContent:toolbarButton
 																	 action:@selector(openCustomEmoticonPanel:)
-																	   menu:nil];
+																	   menu:nil] retain];
 	
+	[chatItem setMinSize:NSMakeSize(32,32)];
+	[chatItem setMaxSize:NSMakeSize(32,32)];
+	[toolbarButton setToolbarItem:chatItem];	
 	[[adium toolbarController] registerToolbarItem:chatItem forToolbarType:@"TextEntry"];
 	
 	//Add Menu Items
@@ -83,13 +92,28 @@
 	
 	quickCustomMenuItem = [[NSMenuItem alloc] initWithTitle:TITLE_INSERT_CUSTOM_EMOTICON
 													 target:self
-						   							 action:@selector(openCustomEmoticonPanel:) 
+						   							 action:@selector(dummyTarget:) 
 						   					  keyEquivalent:@""];
 	
 	quickContextualCustomMenuItem = [[NSMenuItem alloc] initWithTitle:TITLE_INSERT_CUSTOM_EMOTICON
 															   target:self
-															   action:@selector(openCustomEmoticonPanel:)
+															   action:@selector(dummyTarget:)
 														keyEquivalent:@""];	
+	
+	/* Create a submenu for these so menu:updateItem:atIndex:shouldCancel: will be called 
+	 * to populate them later. Don't need to check respondsToSelector:@selector(setDelegate:).
+	 */
+	NSMenu	*tempMenu;
+	tempMenu = [[NSMenu alloc] init];
+	[tempMenu setDelegate:self];
+	[quickCustomMenuItem setSubmenu:tempMenu];
+	[tempMenu release];
+	
+	tempMenu = [[NSMenu alloc] init];
+	[tempMenu setDelegate:self];
+	[quickContextualCustomMenuItem setSubmenu:tempMenu];
+	[tempMenu release];	
+	
 	[[adium menuController] addContextualMenuItem:quickContextualCustomMenuItem toLocation:Context_TextView_Edit];
 	[[adium menuController] addMenuItem:quickCustomMenuItem toLocation:LOC_Edit_Additions];
 	
@@ -120,9 +144,11 @@
 	[NOTIFICATION_CENTER removeObserver:self];
 	
 	[customEmoticonController release];
-	[toolbarItem release];
+	[toolbarItems release];
 	
 	[MSNPlusPluginPreferencePane release];
+	
+	[AISmileyController unloadController];
 }
 
 - (NSString *)pluginAuthor {
@@ -130,7 +156,7 @@
 }
 
 - (NSString *)pluginVersion {
-	return @"0.7";
+	return @"0.8";
 }
 
 - (NSString *)pluginDescription {
@@ -172,7 +198,7 @@
 		[mItem setTitle:TITLE_CUSTOM_EMOTICON];
 		[item setMenuFormRepresentation:mItem];
 		
-		[toolbarItem addObject:item];
+		[toolbarItems addObject:item];
 	}
 }
 
@@ -183,10 +209,17 @@
 	NSToolbarItem	*item = [[notification userInfo] objectForKey:@"item"];
 	if ([[item itemIdentifier] isEqualToString:TOOLBAR_CUSTOM_EMOTICON_IDENTIFIER]) {
 		[item setView:nil];
-		[toolbarItem removeObject:item];
+		[toolbarItems removeObject:item];
 	}
 }
 
+/*!
+ * @brief Just a target so we get the validateMenuItem: call for the emoticon menu
+ */
+- (IBAction)dummyTarget:(id)sender
+{
+	//Empty
+}
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
 #ifndef ADIUM_14	
@@ -195,14 +228,131 @@
 		return NO;
 #endif
 	
-	if ([[menuItem title] isEqualToString:TITLE_INSERT_CUSTOM_EMOTICON]) {
+	if ([[menuItem title] isEqualToString:TITLE_INSERT_CUSTOM_EMOTICON] || [[menuItem title] isEqualToString:TITLE_CUSTOM_EMOTICON_PANEL]) {
 		return YES;
-	} 
-	else if([[menuItem title] isEqualToString:[TITLE_ADDAS_CUSTOM_EMOTICON stringByAppendingEllipsis]]) {
+	} else if([[menuItem title] isEqualToString:[TITLE_ADDAS_CUSTOM_EMOTICON stringByAppendingEllipsis]]) {
 		return [[menuItem menu] itemWithTitle:NSLocalizedStringFromTableInBundle(@"Open Image", nil, WEBKIT_BUNDLE , nil)] != nil;
+	} else {
+		//Disable the emoticon menu items if we're not in a text field
+		NSResponder	*responder = [[[NSApplication sharedApplication] keyWindow] firstResponder];
+		if (responder && [responder isKindOfClass:[NSText class]]) {
+			return [(NSText *)responder isEditable];
+		} else {
+			return NO;
+		}
+		
 	}
 	
 	return NO;
+}
+
+/*!
+ * @brief We don't want to get -menuNeedsUpdate: called on every keystroke. This method suppresses that.
+ */
+- (BOOL)menuHasKeyEquivalent:(NSMenu *)menu forEvent:(NSEvent *)event target:(id *)target action:(SEL *)action {
+	*target = nil;  //use menu's target
+	*action = NULL; //use menu's action
+	return NO;
+}
+
+/*!
+ * @brief Update our menus if necessary
+ *
+ * Called each time before any of our menus are displayed.
+ * This rebuilds menus incrementally, in place, and only updating items that need it.
+ *
+ */
+- (BOOL)menu:(NSMenu *)menu updateItem:(NSMenuItem *)item atIndex:(int)index shouldCancel:(BOOL)shouldCancel
+{
+	NSArray			*emoticons = [AISmileyController getAllSmileys];
+	
+	/* We need special voodoo here to identify if the menu belongs to a toolbar,
+	 * add the necessary pad item, and then adjust the index accordingly.
+	 * this shouldn't be necessary, but NSToolbar is evil.
+	 */
+	
+	int realIndex=index;
+	
+	if ([[[menu itemAtIndex:0] title] isEqualToString:TITLE_CUSTOM_EMOTICON]) {
+		if (index == 0) {
+			return YES;
+		} else {
+			--index;
+		}
+	}
+	
+	if(index==1) // Separator
+	{
+		[menu removeItemAtIndex:realIndex];
+        [menu insertItem:[NSMenuItem separatorItem] atIndex:realIndex];
+	}
+	else if(index==0) { // Open Panel
+		[item setTitle:TITLE_CUSTOM_EMOTICON_PANEL];
+		[item setTarget:self];
+		[item setAction:@selector(openCustomEmoticonPanel:)];
+		[item setKeyEquivalent:@""];
+		[item setImage:nil];
+		[item setRepresentedObject:nil];
+		[item setSubmenu:nil];		
+	} else {
+		PurpleCustomSmiley	*emoticon = [emoticons objectAtIndex:index-2];
+		if (![[item representedObject] isEqualTo:emoticon]) {
+			[item setTitle:[emoticon shortcut]];
+			[item setTarget:self];
+			[item setAction:@selector(insertEmoticon:)];
+			[item setKeyEquivalent:@""];
+			[item setImage:[[emoticon image] imageByScalingForMenuItem]];
+			[item setRepresentedObject:emoticon];
+			[item setSubmenu:nil];
+		}
+	}
+	
+	return YES;
+}
+
+/*!
+ * @brief Set the number of items that should be in the menu.
+ *
+ * Toolbars need one empty item to display properly.  We increase the number by 1, if the menu
+ * is in a toolbar
+ *
+ */
+- (int)numberOfItemsInMenu:(NSMenu *)menu
+{	
+	int				 itemCounts = -1;
+	
+	itemCounts = [[AISmileyController getAllSmileys] count] + 2;
+	
+	if ([menu numberOfItems] > 0) {
+		if ([[[menu itemAtIndex:0] title] isEqualToString:TITLE_CUSTOM_EMOTICON]) {
+			++itemCounts;
+		}
+	}
+	
+	return itemCounts;
+}
+
+/*!
+ * @brief Insert an emoticon into the first responder if possible
+ *
+ * First responder must be an editable NSTextView.
+ *
+ * @param sender An NSMenuItem whose representedObject is an AIEmoticon
+ */
+- (void)insertEmoticon:(id)sender
+{
+	if ([sender isKindOfClass:[NSMenuItem class]]) {
+		NSString *emoString = [[sender representedObject] shortcut];
+		
+		NSResponder *responder = [[[NSApplication sharedApplication] keyWindow] firstResponder];
+		if (emoString && [responder isKindOfClass:[NSTextView class]] && [(NSTextView *)responder isEditable]) {
+			NSRange tmpRange = [(NSTextView *)responder selectedRange];
+			if (0 != tmpRange.length) {
+				[(NSTextView *)responder setSelectedRange:NSMakeRange((tmpRange.location + tmpRange.length),0)];
+			}
+			[responder insertText:emoString];
+		}
+    }
 }
 
 - (void)addCustomSmiley:(id)sender {

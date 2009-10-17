@@ -10,6 +10,7 @@
 }
 + (void) sendChangedNotification;
 + (NSArray*) getAllSmileys;
++ (void) unloadController;
 + (id)smileyPanelWindowController;
 + (void)closeSharedInstance;
 
