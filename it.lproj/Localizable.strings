@@ -32,6 +32,10 @@
 
 "Emoticon with this shortcut already exist. Do you want to overwrite it?" = "Un'emoticon con questa abbreviazione già esiste. Vuoi sovrascriverla?";
 
-"Cannot open image file!"="Impossibile aprire il file dell'immagine!";
+"Cannot open image file!" = "Impossibile aprire il file dell'immagine!";
 
 "Enable MSN Plus colored nicknames filtering" = "Enable MSN Plus colored nicknames filtering";
+
+"Insert Custom Emoticon" = "Inserisci Emoticon Personalizzata";
+
+"Insert a custom emoticon into the text" = "Inserisci un'emoticon personalizzata nel testo";
