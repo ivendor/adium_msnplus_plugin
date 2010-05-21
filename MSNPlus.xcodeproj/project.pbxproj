@@ -355,6 +355,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
 					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
@@ -364,7 +365,7 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = MSNPlus;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx10.5;
 				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = AdiumPlugin;
@@ -386,6 +387,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
 					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
@@ -395,7 +397,7 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MSNPlus;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx10.5;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = AdiumPlugin;
@@ -409,7 +411,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
@@ -427,7 +429,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";

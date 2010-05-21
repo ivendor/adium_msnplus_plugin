@@ -13,6 +13,8 @@
 #import <Adium/AIListObject.h>
 #import <Adium/AIEmoticon.h>
 #import <Adium/AIContentMessage.h>
+#import <Adium/ESDebugAILog.h>
+#import <AdiumLibpurple/CBPurpleAccount.h>
 #import <AdiumLibpurple/ESMSNService.h>
 #import <AIUtilities/AIStringAdditions.h>
 #import <AIUtilities/AIDictionaryAdditions.h>
@@ -148,32 +150,17 @@
 
 //Returns a characterset containing characters that hint at the presence of an emoticon
 - (NSCharacterSet *)customEmoticonHintCharacterSet {
-#ifndef ADIUM_14	
-	if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
-												  group:PREF_GROUP_MSN_SERVICE] boolValue])
-		return nil;
-#endif
 	if (!_customEmoticonHintCharacterSet) [self _buildCharacterSetsAndIndexCustomEmoticons];
 	return _customEmoticonHintCharacterSet;
 }
 
 //Returns a characterset containing all the characters that may start an emoticon
 - (NSCharacterSet *)customEmoticonStartCharacterSet {
-#ifndef ADIUM_14	
-	if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
-												  group:PREF_GROUP_MSN_SERVICE] boolValue])
-		return nil;
-#endif
 	if (!_customEmoticonStartCharacterSet) [self _buildCharacterSetsAndIndexCustomEmoticons];
 	return _customEmoticonStartCharacterSet;
 }
 
 - (NSDictionary *)customEmoticonIndex {
-#ifndef ADIUM_14
-	if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
-												  group:PREF_GROUP_MSN_SERVICE] boolValue])
-		return nil;
-#endif
 	if (!_customEmoticonIndexDict) [self _buildCharacterSetsAndIndexCustomEmoticons];
 	return _customEmoticonIndexDict;
 }
@@ -182,8 +169,17 @@
 	BOOL result=FALSE;
 	if ([context isKindOfClass:[AIContentMessage class]]) {
 		AIContentMessage* contMessage=context;
-		if([contMessage isOutgoing] && ![contMessage isAutoreply] && [[contMessage type] isEqualToString:CONTENT_MESSAGE_TYPE] && [[[[contMessage destination] service] serviceID] isEqualToString:@"MSN"])
-			result=TRUE;
+		
+		if([contMessage isOutgoing] && ![contMessage isAutoreply] && [[contMessage type] isEqualToString:CONTENT_MESSAGE_TYPE] && [[[[[contMessage chat] account] service] serviceID] isEqualToString:@"MSN"])
+		{
+#ifdef ADIUM_14			
+			if([[[[contMessage chat] account] preferenceForKey:KEY_DISPLAY_CUSTOM_EMOTICONS group:GROUP_ACCOUNT_STATUS] boolValue])
+#else
+			if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
+														  group:PREF_GROUP_MSN_SERVICE] boolValue])
+#endif
+				result=TRUE;
+		}
 	}
 	return result;
 }

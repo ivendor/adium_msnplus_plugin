@@ -1,5 +1,12 @@
 Changelog:
 
+v1.0:
+
+- New icon in toolbar
+- (Only Adium 1.4) Custom Emoticon are not shown if the MSN account emoticon flag is not active.
+- Nicknames are now correctly updated with last nickanme from server.
+- Fixed Custom Emoticons not showed in MSN Group Chat.
+
 v0.8:
 
 - Item in "Edit" menu, contextual menu item and toolbar item now behaves as Adium Emoticons menu (That is, showing a menu with all emoticons and a link for open the emoticons panel).

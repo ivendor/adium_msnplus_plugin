@@ -156,7 +156,7 @@
 }
 
 - (NSString *)pluginVersion {
-	return @"0.8";
+	return @"1.0";
 }
 
 - (NSString *)pluginDescription {
@@ -380,13 +380,20 @@
 												 group:PREF_GROUP_MSNPLUS] boolValue])
 		return nil;
 	
+	if(![listObject isKindOfClass:[AIListContact class]])
+		 return nil;
+		 
+	AIListContact* contact=(AIListContact*)listObject;
+	
+	if(![[[[contact account] service] serviceID] isEqualToString:@"MSN"])
+		return nil;
+		
+	
 	NSSet	*modifiedAttributes;
 	
-	[[listObject displayArrayForKey:@"Display Name"] setObject:[[listObject displayName] transBBCode:FALSE] withOwner:self priorityLevel:High_Priority];
-	
-	[[listObject displayArrayForKey:@"Long Display Name"] setObject:[[listObject longDisplayName] transBBCode:FALSE] withOwner:self];
-	
-	modifiedAttributes = [NSSet setWithObjects:@"Display Name", @"Long Display Name", nil];
+	[[listObject displayArrayForKey:@"Server Display Name" create:TRUE] setObject:[[contact serversideDisplayName] transBBCode:FALSE] withOwner:self];
+
+	modifiedAttributes = [NSSet setWithObjects:@"Server Display Name", nil];
 	
 	[CONTACTOBSERVER_MANAGER listObjectAttributesChanged:listObject
 												  modifiedKeys:modifiedAttributes];
