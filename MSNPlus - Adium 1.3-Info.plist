@@ -3,30 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>AIMinimumAdiumVersionRequirement</key>
-	<string>1.4b18</string>
+	<string>1.3</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>it.ivendor.${PRODUCT_NAME:rfc1034Identifier}</string>
+	<string>it.ivendor.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>AdiM</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.5.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2010 Tiziano Carotti</string>
+	<string>© 2010 Tiziano Carotti</string>	
 	<key>NSPrincipalClass</key>
 	<string>AIMSNPlus</string>
 </dict>
 </plist>
+

@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB19CDA811A6D91200EA279C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDA711A6D91200EA279C /* Cocoa.framework */; };
+		EB19CDAE11A6D94600EA279C /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDAD11A6D94600EA279C /* Adium.framework */; };
+		EB19CDB011A6D94600EA279C /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDAF11A6D94600EA279C /* AdiumLibpurple.framework */; };
+		EB19CDB211A6D94700EA279C /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDB111A6D94700EA279C /* AIUtilities.framework */; };
+		EB19CDB411A6D94700EA279C /* FriBidi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDB311A6D94700EA279C /* FriBidi.framework */; };
+		EB19CDBE11A6D98000EA279C /* libglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDBD11A6D98000EA279C /* libglib.framework */; };
+		EB19CDC011A6D98000EA279C /* libgmodule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDBF11A6D98000EA279C /* libgmodule.framework */; };
+		EB19CDC211A6D98000EA279C /* libgobject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDC111A6D98000EA279C /* libgobject.framework */; };
+		EB19CDC411A6D98000EA279C /* libgthread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDC311A6D98000EA279C /* libgthread.framework */; };
+		EB19CDC611A6D98000EA279C /* libintl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDC511A6D98000EA279C /* libintl.framework */; };
+		EB19CDC811A6D98000EA279C /* libjson-glib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDC711A6D98000EA279C /* libjson-glib.framework */; };
+		EB19CDCA11A6D98000EA279C /* libmeanwhile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDC911A6D98000EA279C /* libmeanwhile.framework */; };
+		EB19CDCC11A6D98000EA279C /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19CDCB11A6D98000EA279C /* libpurple.framework */; };
+		EB1CAAAF11A6D14500D9FF77 /* AddCustomSmiley.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6CFB3C1052A5E500D032A4 /* AddCustomSmiley.xib */; };
+		EB1CAAB011A6D14500D9FF77 /* CustomSmiley.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6CFB3D1052A5E500D032A4 /* CustomSmiley.xib */; };
+		EB1CAAB111A6D14500D9FF77 /* custom-emoticon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6C050A1052D6C000D032A4 /* custom-emoticon.png */; };
+		EB1CAAB211A6D14500D9FF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE4FBEA1053B4EE00C5675D /* InfoPlist.strings */; };
+		EB1CAAB311A6D14500D9FF77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE4FBEC1053B4F700C5675D /* Localizable.strings */; };
+		EB1CAAB411A6D14500D9FF77 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBE4002C1053C11400C5675D /* License.txt */; };
+		EB1CAAB511A6D14500D9FF77 /* MSNPlusPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB97E1E5106EAEF000C6995B /* MSNPlusPreferences.xib */; };
+		EB1CAAB611A6D14500D9FF77 /* MSNPlusPluginDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB97E239106EB6FA00C6995B /* MSNPlusPluginDefaults.plist */; };
+		EB1CAAB711A6D15000D9FF77 /* MSNPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7D910528C4A004FA79E /* MSNPlus.m */; };
+		EB1CAAB811A6D15000D9FF77 /* BBNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7DC10528C77004FA79E /* BBNode.m */; };
+		EB1CAAB911A6D15000D9FF77 /* BBStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7DE10528C77004FA79E /* BBStringCategory.m */; };
+		EB1CAABA11A6D15000D9FF77 /* AIAddSmileyController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6CFB111052A5A400D032A4 /* AIAddSmileyController.m */; };
+		EB1CAABB11A6D15000D9FF77 /* AISmileyController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6CFB131052A5A400D032A4 /* AISmileyController.m */; };
+		EB1CAABC11A6D15000D9FF77 /* AICustomEmoticonController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C04511052CB2D00D032A4 /* AICustomEmoticonController.m */; };
+		EB1CAABD11A6D15000D9FF77 /* MSNPlusPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = EB97E1E3106EAED600C6995B /* MSNPlusPreferences.m */; };
+		EB1CAAF611A6D2A900D9FF77 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1CAAF511A6D2A900D9FF77 /* Cocoa.framework */; };
 		EB57B7DA10528C4A004FA79E /* MSNPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7D910528C4A004FA79E /* MSNPlus.m */; };
 		EB57B7DF10528C77004FA79E /* BBNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7DC10528C77004FA79E /* BBNode.m */; };
 		EB57B7E010528C77004FA79E /* BBStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B7DE10528C77004FA79E /* BBStringCategory.m */; };
@@ -16,7 +45,6 @@
 		EB6CFB151052A5A400D032A4 /* AISmileyController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6CFB131052A5A400D032A4 /* AISmileyController.m */; };
 		EB6CFB3E1052A5E500D032A4 /* AddCustomSmiley.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6CFB3C1052A5E500D032A4 /* AddCustomSmiley.xib */; };
 		EB6CFB3F1052A5E500D032A4 /* CustomSmiley.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6CFB3D1052A5E500D032A4 /* CustomSmiley.xib */; };
-		EB6CFD511052AA4800D032A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6CFD501052AA4800D032A4 /* Cocoa.framework */; };
 		EB6CFD5B1052AB2E00D032A4 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6CFD5A1052AB2E00D032A4 /* Adium.framework */; };
 		EB6CFD5D1052AB2E00D032A4 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */; };
 		EB6CFD5F1052AB2E00D032A4 /* FriBidi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */; };
@@ -38,12 +66,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* MSNPlus_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNPlus_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* MSNPlus.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSNPlus.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		EB19CDA711A6D91200EA279C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		EB19CDAD11A6D94600EA279C /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = Adium13/build/Deployment/Adium.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDAF11A6D94600EA279C /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = Adium13/build/Deployment/AdiumLibpurple.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDB111A6D94700EA279C /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = Adium13/build/Deployment/AIUtilities.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDB311A6D94700EA279C /* FriBidi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FriBidi.framework; path = Adium13/build/Deployment/FriBidi.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDBD11A6D98000EA279C /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = Adium13/Frameworks/libglib.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDBF11A6D98000EA279C /* libgmodule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmodule.framework; path = Adium13/Frameworks/libgmodule.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDC111A6D98000EA279C /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = Adium13/Frameworks/libgobject.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDC311A6D98000EA279C /* libgthread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgthread.framework; path = Adium13/Frameworks/libgthread.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDC511A6D98000EA279C /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = Adium13/Frameworks/libintl.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDC711A6D98000EA279C /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "Adium13/Frameworks/libjson-glib.framework"; sourceTree = SOURCE_ROOT; };
+		EB19CDC911A6D98000EA279C /* libmeanwhile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libmeanwhile.framework; path = Adium13/Frameworks/libmeanwhile.framework; sourceTree = SOURCE_ROOT; };
+		EB19CDCB11A6D98000EA279C /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = Adium13/Frameworks/libpurple.framework; sourceTree = SOURCE_ROOT; };
+		EB1CAA9E11A6D05D00D9FF77 /* MSNPlus.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSNPlus.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1CAA9F11A6D05D00D9FF77 /* MSNPlus - Adium 1.3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSNPlus - Adium 1.3-Info.plist"; sourceTree = "<group>"; };
+		EB1CAAF511A6D2A900D9FF77 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		EB57B7D810528C4A004FA79E /* MSNPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNPlus.h; sourceTree = "<group>"; };
 		EB57B7D910528C4A004FA79E /* MSNPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNPlus.m; sourceTree = "<group>"; };
 		EB57B7DB10528C77004FA79E /* BBNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNode.h; sourceTree = "<group>"; };
@@ -60,19 +101,18 @@
 		EB6CFB131052A5A400D032A4 /* AISmileyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AISmileyController.m; sourceTree = "<group>"; };
 		EB6CFB3C1052A5E500D032A4 /* AddCustomSmiley.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddCustomSmiley.xib; path = Resources/AddCustomSmiley.xib; sourceTree = "<group>"; };
 		EB6CFB3D1052A5E500D032A4 /* CustomSmiley.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomSmiley.xib; path = Resources/CustomSmiley.xib; sourceTree = "<group>"; };
-		EB6CFD501052AA4800D032A4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		EB6CFD5A1052AB2E00D032A4 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = Frameworks/Adium.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = Frameworks/AIUtilities.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FriBidi.framework; path = Frameworks/FriBidi.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD661052AB4C00D032A4 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = InternalFrameworks/libglib.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD681052AB4C00D032A4 /* libgmodule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmodule.framework; path = InternalFrameworks/libgmodule.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD6A1052AB4C00D032A4 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = InternalFrameworks/libgobject.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD6C1052AB4C00D032A4 /* libgthread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgthread.framework; path = InternalFrameworks/libgthread.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD6E1052AB4C00D032A4 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = InternalFrameworks/libintl.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD701052AB4C00D032A4 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "InternalFrameworks/libjson-glib.framework"; sourceTree = SOURCE_ROOT; };
-		EB6CFD721052AB4C00D032A4 /* libmeanwhile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libmeanwhile.framework; path = InternalFrameworks/libmeanwhile.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFD741052AB4C00D032A4 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = InternalFrameworks/libpurple.framework; sourceTree = SOURCE_ROOT; };
-		EB6CFDFC1052B0F900D032A4 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = Frameworks/AdiumLibpurple.framework; sourceTree = SOURCE_ROOT; };
+		EB6CFD5A1052AB2E00D032A4 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "../../adium-1.4/build/Release/Adium.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "../../adium-1.4/build/Release/AIUtilities.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FriBidi.framework; path = "../../adium-1.4/build/Release/FriBidi.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD661052AB4C00D032A4 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = "../../adium-1.4/Frameworks/libglib.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD681052AB4C00D032A4 /* libgmodule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmodule.framework; path = "../../adium-1.4/Frameworks/libgmodule.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD6A1052AB4C00D032A4 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = "../../adium-1.4/Frameworks/libgobject.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD6C1052AB4C00D032A4 /* libgthread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgthread.framework; path = "../../adium-1.4/Frameworks/libgthread.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD6E1052AB4C00D032A4 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = "../../adium-1.4/Frameworks/libintl.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD701052AB4C00D032A4 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "../../adium-1.4/Frameworks/libjson-glib.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD721052AB4C00D032A4 /* libmeanwhile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libmeanwhile.framework; path = "../../adium-1.4/Frameworks/libmeanwhile.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFD741052AB4C00D032A4 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = "../../adium-1.4/Frameworks/libpurple.framework"; sourceTree = SOURCE_ROOT; };
+		EB6CFDFC1052B0F900D032A4 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = "../../adium-1.4/build/Release/AdiumLibpurple.framework"; sourceTree = SOURCE_ROOT; };
 		EB97E1E2106EAED600C6995B /* MSNPlusPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNPlusPreferences.h; sourceTree = "<group>"; };
 		EB97E1E3106EAED600C6995B /* MSNPlusPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNPlusPreferences.m; sourceTree = "<group>"; };
 		EB97E1E5106EAEF000C6995B /* MSNPlusPreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSNPlusPreferences.xib; sourceTree = "<group>"; };
@@ -88,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6CFD511052AA4800D032A4 /* Cocoa.framework in Frameworks */,
 				EB6CFD5B1052AB2E00D032A4 /* Adium.framework in Frameworks */,
 				EB6CFD5D1052AB2E00D032A4 /* AIUtilities.framework in Frameworks */,
 				EB6CFD5F1052AB2E00D032A4 /* FriBidi.framework in Frameworks */,
@@ -101,6 +140,27 @@
 				EB6CFD731052AB4C00D032A4 /* libmeanwhile.framework in Frameworks */,
 				EB6CFD751052AB4C00D032A4 /* libpurple.framework in Frameworks */,
 				EB6CFDFD1052B0F900D032A4 /* AdiumLibpurple.framework in Frameworks */,
+				EB1CAAF611A6D2A900D9FF77 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1CAA9C11A6D05D00D9FF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB19CDA811A6D91200EA279C /* Cocoa.framework in Frameworks */,
+				EB19CDAE11A6D94600EA279C /* Adium.framework in Frameworks */,
+				EB19CDB011A6D94600EA279C /* AdiumLibpurple.framework in Frameworks */,
+				EB19CDB211A6D94700EA279C /* AIUtilities.framework in Frameworks */,
+				EB19CDB411A6D94700EA279C /* FriBidi.framework in Frameworks */,
+				EB19CDBE11A6D98000EA279C /* libglib.framework in Frameworks */,
+				EB19CDC011A6D98000EA279C /* libgmodule.framework in Frameworks */,
+				EB19CDC211A6D98000EA279C /* libgobject.framework in Frameworks */,
+				EB19CDC411A6D98000EA279C /* libgthread.framework in Frameworks */,
+				EB19CDC611A6D98000EA279C /* libintl.framework in Frameworks */,
+				EB19CDC811A6D98000EA279C /* libjson-glib.framework in Frameworks */,
+				EB19CDCA11A6D98000EA279C /* libmeanwhile.framework in Frameworks */,
+				EB19CDCC11A6D98000EA279C /* libpurple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +183,8 @@
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
-				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+				EB19CB5F11A6D8C500EA279C /* Adium 1.3 */,
+				EB1CAAC411A6D18B00D9FF77 /* Adium 1.4 */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -132,6 +192,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EB1CAA9F11A6D05D00D9FF77 /* MSNPlus - Adium 1.3-Info.plist */,
 				EB6C050A1052D6C000D032A4 /* custom-emoticon.png */,
 				EB6CFB3C1052A5E500D032A4 /* AddCustomSmiley.xib */,
 				EB6CFB3D1052A5E500D032A4 /* CustomSmiley.xib */,
@@ -157,10 +218,46 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB6CFD501052AA4800D032A4 /* Cocoa.framework */,
+				8D5B49B6048680CD000E48DA /* MSNPlus.AdiumPlugin */,
+				EB1CAA9E11A6D05D00D9FF77 /* MSNPlus.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* MSNPlus_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EB19CB5F11A6D8C500EA279C /* Adium 1.3 */ = {
+			isa = PBXGroup;
+			children = (
+				EB19CDA711A6D91200EA279C /* Cocoa.framework */,
+				EB19CDAD11A6D94600EA279C /* Adium.framework */,
+				EB19CDAF11A6D94600EA279C /* AdiumLibpurple.framework */,
+				EB19CDB111A6D94700EA279C /* AIUtilities.framework */,
+				EB19CDB311A6D94700EA279C /* FriBidi.framework */,
+				EB19CDBD11A6D98000EA279C /* libglib.framework */,
+				EB19CDBF11A6D98000EA279C /* libgmodule.framework */,
+				EB19CDC111A6D98000EA279C /* libgobject.framework */,
+				EB19CDC311A6D98000EA279C /* libgthread.framework */,
+				EB19CDC511A6D98000EA279C /* libintl.framework */,
+				EB19CDC711A6D98000EA279C /* libjson-glib.framework */,
+				EB19CDC911A6D98000EA279C /* libmeanwhile.framework */,
+				EB19CDCB11A6D98000EA279C /* libpurple.framework */,
+			);
+			name = "Adium 1.3";
+			sourceTree = "<group>";
+		};
+		EB1CAAC411A6D18B00D9FF77 /* Adium 1.4 */ = {
+			isa = PBXGroup;
+			children = (
 				EB6CFD5A1052AB2E00D032A4 /* Adium.framework */,
 				EB6CFD5C1052AB2E00D032A4 /* AIUtilities.framework */,
 				EB6CFD5E1052AB2E00D032A4 /* FriBidi.framework */,
@@ -173,34 +270,9 @@
 				EB6CFD721052AB4C00D032A4 /* libmeanwhile.framework */,
 				EB6CFD741052AB4C00D032A4 /* libpurple.framework */,
 				EB6CFDFC1052B0F900D032A4 /* AdiumLibpurple.framework */,
+				EB1CAAF511A6D2A900D9FF77 /* Cocoa.framework */,
 			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				089C167FFE841241C02AAC07 /* AppKit.framework */,
-				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
-				089C1672FE841209C02AAC07 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		19C28FB8FE9D52D311CA2CBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B6048680CD000E48DA /* MSNPlus.AdiumPlugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		32C88E010371C26100C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32DBCF630370AF2F00C91783 /* MSNPlus_Prefix.pch */,
-			);
-			name = "Other Sources";
+			name = "Adium 1.4";
 			sourceTree = "<group>";
 		};
 		EB6CFB051052A41600D032A4 /* BBCode */ = {
@@ -239,9 +311,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D5B49AC048680CD000E48DA /* MSNPlus */ = {
+		8D5B49AC048680CD000E48DA /* MSNPlus - Adium 1.4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "MSNPlus" */;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "MSNPlus - Adium 1.4" */;
 			buildPhases = (
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
@@ -251,10 +323,27 @@
 			);
 			dependencies = (
 			);
-			name = MSNPlus;
+			name = "MSNPlus - Adium 1.4";
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = MSNColorNicknames;
 			productReference = 8D5B49B6048680CD000E48DA /* MSNPlus.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EB1CAA9D11A6D05D00D9FF77 /* MSNPlus - Adium 1.3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1CAAA211A6D05E00D9FF77 /* Build configuration list for PBXNativeTarget "MSNPlus - Adium 1.3" */;
+			buildPhases = (
+				EB1CAA9A11A6D05D00D9FF77 /* Resources */,
+				EB1CAA9B11A6D05D00D9FF77 /* Sources */,
+				EB1CAA9C11A6D05D00D9FF77 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MSNPlus - Adium 1.3";
+			productName = "MSNPlus - Adium 1.3";
+			productReference = EB1CAA9E11A6D05D00D9FF77 /* MSNPlus.AdiumPlugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -274,7 +363,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* MSNPlus */,
+				8D5B49AC048680CD000E48DA /* MSNPlus - Adium 1.4 */,
+				EB1CAA9D11A6D05D00D9FF77 /* MSNPlus - Adium 1.3 */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +385,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB1CAA9A11A6D05D00D9FF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1CAAAF11A6D14500D9FF77 /* AddCustomSmiley.xib in Resources */,
+				EB1CAAB011A6D14500D9FF77 /* CustomSmiley.xib in Resources */,
+				EB1CAAB111A6D14500D9FF77 /* custom-emoticon.png in Resources */,
+				EB1CAAB211A6D14500D9FF77 /* InfoPlist.strings in Resources */,
+				EB1CAAB311A6D14500D9FF77 /* Localizable.strings in Resources */,
+				EB1CAAB411A6D14500D9FF77 /* License.txt in Resources */,
+				EB1CAAB511A6D14500D9FF77 /* MSNPlusPreferences.xib in Resources */,
+				EB1CAAB611A6D14500D9FF77 /* MSNPlusPluginDefaults.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,6 +414,20 @@
 				EB6CFB151052A5A400D032A4 /* AISmileyController.m in Sources */,
 				EB6C04521052CB2D00D032A4 /* AICustomEmoticonController.m in Sources */,
 				EB97E1E4106EAED600C6995B /* MSNPlusPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1CAA9B11A6D05D00D9FF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1CAAB711A6D15000D9FF77 /* MSNPlus.m in Sources */,
+				EB1CAAB811A6D15000D9FF77 /* BBNode.m in Sources */,
+				EB1CAAB911A6D15000D9FF77 /* BBStringCategory.m in Sources */,
+				EB1CAABA11A6D15000D9FF77 /* AIAddSmileyController.m in Sources */,
+				EB1CAABB11A6D15000D9FF77 /* AISmileyController.m in Sources */,
+				EB1CAABC11A6D15000D9FF77 /* AICustomEmoticonController.m in Sources */,
+				EB1CAABD11A6D15000D9FF77 /* MSNPlusPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,16 +457,16 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADIUM_BUILD_PATH = /build/Release;
-				ADIUM_FOLDER = "/Users/tiziano/Developer/Objective-C/Adium/adium-svn/adium-1.4";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.4";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.4";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-					"\"$(SRCROOT)/InternalFrameworks\"",
-					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)/Adium14/build/Release\"",
+					"\"$(SRCROOT)/Adium14/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -357,9 +476,9 @@
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
-					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
-					"$(SRCROOT)/InternalFrameworks/libgobject.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libgobject.framework/Headers",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -377,21 +496,23 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.4";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.4";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-					"\"$(SRCROOT)/InternalFrameworks\"",
-					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)/Adium14/build/Release\"",
+					"\"$(SRCROOT)/Adium14/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/InternalFrameworks/libpurple.framework/Headers",
-					"$(SRCROOT)/InternalFrameworks/libglib.framework/Headers",
-					"$(SRCROOT)/InternalFrameworks/libgobject.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/Adium14/Frameworks/libgobject.framework/Headers",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -429,7 +550,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
@@ -440,10 +561,86 @@
 			};
 			name = Release;
 		};
+		EB1CAAA011A6D05E00D9FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.3";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.3";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Adium13/build/Deployment\"",
+					"\"$(SRCROOT)/Adium13/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Adium13/Frameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/Adium13/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/Adium13/Frameworks/libgobject.framework/Headers",
+				);
+				INFOPLIST_FILE = "MSNPlus - Adium 1.3-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MSNPlus;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		EB1CAAA111A6D05E00D9FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.3";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)-1.3";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Adium13/build/Deployment\"",
+					"\"$(SRCROOT)/Adium13/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MSNPlus_Prefix.pch;
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Adium13/Frameworks/libpurple.framework/Headers",
+					"$(SRCROOT)/Adium13/Frameworks/libglib.framework/Headers",
+					"$(SRCROOT)/Adium13/Frameworks/libgobject.framework/Headers",
+				);
+				INFOPLIST_FILE = "MSNPlus - Adium 1.3-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MSNPlus;
+				WRAPPER_EXTENSION = AdiumPlugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "MSNPlus" */ = {
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "MSNPlus - Adium 1.4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB913B08733D840010E9CD /* Debug */,
@@ -457,6 +654,15 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1CAAA211A6D05E00D9FF77 /* Build configuration list for PBXNativeTarget "MSNPlus - Adium 1.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1CAAA011A6D05E00D9FF77 /* Debug */,
+				EB1CAAA111A6D05E00D9FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
