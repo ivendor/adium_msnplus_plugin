@@ -16,7 +16,7 @@
 #import "AICustomEmoticonController.h"
 #import "MSNPlusPreferences.h"
 
-@interface AIMSNPlus : AIPlugin <AIListObjectObserver, AIContentFilter> {
+@interface AIMSNPlus : AIPlugin <AIContentFilter> {
 	AICustomEmoticonController	*customEmoticonController;
 	NSMutableSet				*toolbarItems;
 	NSMenuItem					*quickCustomMenuItem;
