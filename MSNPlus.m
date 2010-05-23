@@ -38,9 +38,6 @@
 #define TITLE_ADDAS_CUSTOM_EMOTICON				AILocalizedString(@"Add As Custom Emoticon",nil)
 #define TITLE_CUSTOM_EMOTICON_PANEL				AILocalizedString(@"Open custom emoticons panel",nil)
 
-@interface AIMSNPlus (PRIVATE)
-- (NSSet *)_applyBBCode:(AIListObject*) listObject;
-@end
 
 @implementation AIMSNPlus
 
@@ -156,7 +153,7 @@
 }
 
 - (NSString *)pluginVersion {
-	return @"1.0";
+	return @"1.01";
 }
 
 - (NSString *)pluginDescription {
@@ -366,52 +363,28 @@
 
 
 - (void)applyMSNColour:(NSNotification *)notification {
-	AIListObject	*listObject = [notification object];
-		
-	if([[[listObject service] serviceID] isEqualToString:@"MSN"]) {
-		[self _applyBBCode:listObject];
-	}	
 	
-}
-
-- (NSSet *)_applyBBCode:(AIListObject*) listObject {
+	AIListObject	*listObject = [notification object];
 	
 	if(![[[adium preferenceController] preferenceForKey:KEY_MSNPLUS_COLORED_NICKNAMES
-												 group:PREF_GROUP_MSNPLUS] boolValue])
-		return nil;
+												  group:PREF_GROUP_MSNPLUS] boolValue])
+		return;
 	
 	if(![listObject isKindOfClass:[AIListContact class]])
-		 return nil;
-		 
+		return;
+	
 	AIListContact* contact=(AIListContact*)listObject;
 	
 	if(![[[[contact account] service] serviceID] isEqualToString:@"MSN"])
-		return nil;
-		
+		return;
 	
-	NSSet	*modifiedAttributes;
+	NSString* contactName=[contact serversideDisplayName];
 	
-	[[listObject displayArrayForKey:@"Server Display Name" create:TRUE] setObject:[[contact serversideDisplayName] transBBCode:FALSE] withOwner:self];
-
-	modifiedAttributes = [NSSet setWithObjects:@"Server Display Name", nil];
+	NSString* translated=[contactName transBBCode:FALSE];
 	
-	[CONTACTOBSERVER_MANAGER listObjectAttributesChanged:listObject
-												  modifiedKeys:modifiedAttributes];
+	if(![translated isEqualToString:contactName])
+		[contact setServersideAlias:translated silently:TRUE ];
 	
-	return modifiedAttributes;
-}
-
-/*!
- * @brief Update list object
- *
- * As contacts are created or a formattedUID is received, update their alias, display name, and long display name
- */
-- (NSSet *)updateListObject:(AIListObject *)inObject keys:(NSSet *)inModifiedKeys silent:(BOOL)silent {
-    if ((inModifiedKeys == nil) || ([inModifiedKeys containsObject:@"FormattedUID"])) {
-		return [self _applyBBCode:inObject];
-    }
-	
-	return nil;
 }
 
 - (float)filterPriority {

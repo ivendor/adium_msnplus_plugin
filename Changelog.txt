@@ -1,9 +1,13 @@
 Changelog:
 
+v1.01:
+
+- Corrected a bug with MSN name filtering (hoping the last).
+
 v1.0:
 
 - New icon in toolbar
-- (Adium 1.4) Custom Emoticon are not shown if the MSN account emoticon flag is not active.
+- (Adium 1.4) Custom Emoticons are not shown if the MSN account emoticon flag is not active.
 - Nicknames are now correctly updated with last nickanme from server.
 - Fixed Custom Emoticons not showed in MSN Group Chat.
 
