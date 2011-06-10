@@ -197,12 +197,12 @@
 	
 	NSMutableAttributedString   *replacementMessage = nil;
 	
-	NSCharacterSet* customSet=nil;
+	if(![self _isCustomEmoticonApplicable:context])
+		return inAttributedString;
 	
-	if([self _isCustomEmoticonApplicable:context])
-		customSet=[self customEmoticonHintCharacterSet];
+	NSCharacterSet* customSet=[self customEmoticonHintCharacterSet];
 	
-	if (customSet && [[inAttributedString string] rangeOfCharacterFromSet:customSet].location != NSNotFound )
+	if ([[inAttributedString string] rangeOfCharacterFromSet:customSet].location != NSNotFound )
 		replacementMessage = [self _convertEmoticonsInMessage:inAttributedString context:context];
 	
 	return (replacementMessage ? replacementMessage : inAttributedString);
