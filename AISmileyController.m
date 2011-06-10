@@ -84,9 +84,9 @@ int compareSmiley(id first, id second, void* context)
 		char* data=purple_smiley_get_full_path(smile);
 		const char* checksum=purple_smiley_get_checksum(smile);
 		if(data && shortcut && checksum) {
-			NSString* my_shortcut=[NSString stringWithCString:shortcut encoding:NSASCIIStringEncoding];
-			NSString* file=[NSString stringWithCString:data  encoding:NSASCIIStringEncoding];
-			NSString* my_checksum=[NSString stringWithCString:checksum  encoding:NSASCIIStringEncoding];
+			NSString* my_shortcut=[NSString stringWithCString:shortcut encoding:NSUTF8StringEncoding];
+			NSString* file=[NSString stringWithCString:data  encoding:NSUTF8StringEncoding];
+			NSString* my_checksum=[NSString stringWithCString:checksum  encoding:NSUTF8StringEncoding];
 			PurpleCustomSmiley* pc=[[PurpleCustomSmiley alloc] initWithShortcut:my_shortcut andPath:[self _emoticonCachePathForCustomEmoticon:file checksum:my_checksum]];
 			[smileyArray addObject: pc];
 			[pc release];
@@ -147,15 +147,15 @@ int compareSmiley(id first, id second, void* context)
 		return;
 	
 	PurpleSmiley* ex_smile;
-	if((ex_smile=purple_smileys_find_by_shortcut([shortcut_new cStringUsingEncoding:NSASCIIStringEncoding]))!=NULL) {
+	if((ex_smile=purple_smileys_find_by_shortcut([shortcut_new cStringUsingEncoding:NSUTF8StringEncoding]))!=NULL) {
 		NSAlert* alert=[NSAlert alertWithMessageText:AILocalizedString(@"Emoticon with this shortcut already exist!",nil) defaultButton:AILocalizedString(@"OK",nil) alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
 		[alert setAlertStyle:NSCriticalAlertStyle];
 		[alert runModal];
 		return;
 	}
 	
-    PurpleSmiley* smile=purple_smileys_find_by_shortcut([[smiley shortcut] cStringUsingEncoding:NSASCIIStringEncoding]);
-	if(purple_smiley_set_shortcut(smile,[shortcut_new cStringUsingEncoding:NSASCIIStringEncoding])) {
+    PurpleSmiley* smile=purple_smileys_find_by_shortcut([[smiley shortcut] cStringUsingEncoding:NSUTF8StringEncoding]);
+	if(purple_smiley_set_shortcut(smile,[shortcut_new cStringUsingEncoding:NSUTF8StringEncoding])) {
 		[smiley setShortcut:shortcut_new];
 		[AISmileyController sendChangedNotification];
 	}
@@ -179,7 +179,7 @@ int compareSmiley(id first, id second, void* context)
 		[panel orderOut:self];
 		NSString* shortcut=[AIAddSmileyController runAddSmiley: [[panel filenames] objectAtIndex:0]];
 		if(shortcut) {
-			PurpleSmiley* smile=purple_smileys_find_by_shortcut([shortcut cStringUsingEncoding:NSASCIIStringEncoding]);
+			PurpleSmiley* smile=purple_smileys_find_by_shortcut([shortcut cStringUsingEncoding:NSUTF8StringEncoding]);
 			if(smile) {
 				size_t size;
 				gconstpointer data=purple_smiley_get_data(smile, &size);
@@ -218,7 +218,7 @@ int compareSmiley(id first, id second, void* context)
 		
 		for (idx = [selection lastIndex]; idx != NSNotFound; idx = [selection indexLessThanIndex:idx]) {
 			PurpleCustomSmiley* smiley=[userArray objectAtIndex:idx];
-			purple_smiley_delete(purple_smileys_find_by_shortcut([[smiley shortcut]  cStringUsingEncoding:NSASCIIStringEncoding]));
+			purple_smiley_delete(purple_smileys_find_by_shortcut([[smiley shortcut]  cStringUsingEncoding:NSUTF8StringEncoding]));
 			[userArray removeObject:smiley];
 		}
 		[tableView reloadData];
@@ -300,7 +300,7 @@ int compareSmiley(id first, id second, void* context)
 		size_t size;
 		gconstpointer data=purple_smiley_get_data(smile, &size);
 		if(data && shortcut) {
-			NSString* my_shortcut=[NSString stringWithCString:shortcut encoding:NSASCIIStringEncoding];
+			NSString* my_shortcut=[NSString stringWithCString:shortcut encoding:NSUTF8StringEncoding];
 			NSData* my_data=[NSData dataWithBytes:data
 										 length:size];
 			NSImage* image=[[NSImage alloc] initWithData:my_data];

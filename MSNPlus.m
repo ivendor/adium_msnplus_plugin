@@ -153,7 +153,7 @@
 }
 
 - (NSString *)pluginVersion {
-	return @"1.01";
+	return @"1.1";
 }
 
 - (NSString *)pluginDescription {

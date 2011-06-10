@@ -36,7 +36,7 @@
 
 - (IBAction)ok:(id)sender {
 	NSString* shortcut=[textField stringValue];
-	const char* shortcut_s=[shortcut cStringUsingEncoding:NSASCIIStringEncoding];
+	const char* shortcut_s=[shortcut cStringUsingEncoding:NSUTF8StringEncoding];
 	PurpleSmiley* ex_smile;
 	if((ex_smile=purple_smileys_find_by_shortcut(shortcut_s))!=NULL) {
 		NSAlert* alert=[NSAlert alertWithMessageText:AILocalizedString(@"Emoticon with this shortcut already exist. Do you want to overwrite it?",nil) defaultButton:AILocalizedString(@"No",nil) alternateButton:AILocalizedString(@"Yes",nil) otherButton:nil informativeTextWithFormat:@""];
@@ -73,7 +73,7 @@
 		purple_smiley_delete(ex_smile);
 	}
 	g_free(checksum);
-	purple_smiley_new_from_file(shortcut_s,[smileyPath cStringUsingEncoding:NSASCIIStringEncoding]);
+	purple_smiley_new_from_file(shortcut_s,[smileyPath cStringUsingEncoding:NSUTF8StringEncoding]);
 	smileyShortcut=[shortcut retain];
     [self close];
 }

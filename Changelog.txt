@@ -1,5 +1,9 @@
 Changelog:
 
+v1.1:
+
+- Added support for shortcut in utf-8 encoding
+
 v1.01:
 
 - Corrected a bug with MSN name filtering (hoping the last).
