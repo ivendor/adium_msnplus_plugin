@@ -59,7 +59,7 @@ static NSMutableArray* smileyArray = nil;
 	return cache_path;
 }
 
-int compareSmiley(id first, id second, void* context)
+NSInteger compareSmiley(id first, id second, void* context)
 {
 	NSString* first_shortcut=[first shortcut];
 	NSString* second_shortcut=[second shortcut];

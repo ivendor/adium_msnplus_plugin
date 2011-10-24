@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AIMinimumAdiumVersionRequirement</key>
-	<string>1.4b18</string>
+	<string>1.5b1</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -23,7 +23,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.1</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.5.0</string>
+	<string>10.6.0</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© 2011 Tiziano Carotti</string>
 	<key>NSPrincipalClass</key>

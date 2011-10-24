@@ -172,12 +172,7 @@
 		
 		if([contMessage isOutgoing] && ![contMessage isAutoreply] && [[contMessage type] isEqualToString:CONTENT_MESSAGE_TYPE] && [[[[[contMessage chat] account] service] serviceID] isEqualToString:@"MSN"])
 		{
-#ifdef ADIUM_14			
 			if([[[[contMessage chat] account] preferenceForKey:KEY_DISPLAY_CUSTOM_EMOTICONS group:GROUP_ACCOUNT_STATUS] boolValue])
-#else
-			if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
-														  group:PREF_GROUP_MSN_SERVICE] boolValue])
-#endif
 				result=TRUE;
 		}
 	}
@@ -257,7 +252,7 @@
 		
 	} 
 	
-    return (newMessage ? [newMessage autorelease] : inMessage);
+    return (newMessage ? [newMessage autorelease] : [inMessage mutableCopy]);
 }
 
 
@@ -281,7 +276,7 @@
 									  emoticonIndex:(NSDictionary *)emoticonIndex
 										  isMessage:(BOOL)isMessage
 {
-	unsigned int	originalEmoticonLocation = NSNotFound;
+	NSInteger	originalEmoticonLocation = NSNotFound;
 	
 	//Find the next occurence of a suspected emoticon
 	*currentLocation = [messageString rangeOfCharacterFromSet:emoticonStartCharacterSet

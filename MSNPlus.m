@@ -218,13 +218,7 @@
 	//Empty
 }
 
-- (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
-#ifndef ADIUM_14	
-	if(![[[adium preferenceController] preferenceForKey:KEY_MSN_DISPLAY_CUSTOM_EMOTICONS
-												  group:PREF_GROUP_MSN_SERVICE] boolValue])
-		return NO;
-#endif
-	
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem {	
 	if ([[menuItem title] isEqualToString:TITLE_INSERT_CUSTOM_EMOTICON] || [[menuItem title] isEqualToString:TITLE_CUSTOM_EMOTICON_PANEL]) {
 		return YES;
 	} else if([[menuItem title] isEqualToString:[TITLE_ADDAS_CUSTOM_EMOTICON stringByAppendingEllipsis]]) {
@@ -259,7 +253,7 @@
  * This rebuilds menus incrementally, in place, and only updating items that need it.
  *
  */
-- (BOOL)menu:(NSMenu *)menu updateItem:(NSMenuItem *)item atIndex:(int)index shouldCancel:(BOOL)shouldCancel
+- (BOOL)menu:(NSMenu *)menu updateItem:(NSMenuItem *)item atIndex:(NSInteger)index shouldCancel:(BOOL)shouldCancel
 {
 	NSArray			*emoticons = [AISmileyController getAllSmileys];
 	
@@ -314,7 +308,7 @@
  * is in a toolbar
  *
  */
-- (int)numberOfItemsInMenu:(NSMenu *)menu
+- (NSInteger)numberOfItemsInMenu:(NSMenu *)menu
 {	
 	int				 itemCounts = -1;
 	
@@ -387,7 +381,7 @@
 	
 }
 
-- (float)filterPriority {
+- (CGFloat)filterPriority {
 	return HIGHEST_FILTER_PRIORITY;
 }
 

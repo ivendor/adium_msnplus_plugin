@@ -7,23 +7,21 @@
 //
 
 #import <Adium/AIPlugin.h>
-#ifdef ADIUM_14
 #import <Adium/AIContactObserverManager.h>
-#endif
 #import <Adium/AIContactControllerProtocol.h>
 #import <Adium/AIContentControllerProtocol.h>
 #import <Adium/AIPreferencePane.h>
 #import "AICustomEmoticonController.h"
 #import "MSNPlusPreferences.h"
 
-@interface AIMSNPlus : AIPlugin <AIContentFilter> {
+@interface AIMSNPlus : AIPlugin <AIContentFilter,NSMenuDelegate> {
 	AICustomEmoticonController	*customEmoticonController;
 	NSMutableSet				*toolbarItems;
 	NSMenuItem					*quickCustomMenuItem;
 	NSMenuItem					*quickContextualCustomMenuItem;
 	NSMenuItem					*addAsMenuItem;
 	
-	AIPreferencePane	*MSNPlusPluginPreferencePane;
+	AIAdvancedPreferencePane	*MSNPlusPluginPreferencePane;
 }
 
 @end

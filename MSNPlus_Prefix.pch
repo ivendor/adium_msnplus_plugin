@@ -10,8 +10,6 @@
 	#import <AdiumLibpurple/ESMSNService.h>
 
 #ifndef PREF_GROUP_MSN_SERVICE
-	#define ADIUM_14 1
-
 	#define NOTIFICATION_CENTER			[NSNotificationCenter defaultCenter]
 	#define CONTACTOBSERVER_MANAGER		[AIContactObserverManager sharedManager]
 	#define WEBKIT_BUNDLE				[NSBundle mainBundle]
